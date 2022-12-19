@@ -1,0 +1,1 @@
+Aplicação WEB em Node.js/Vue.js simples com interação MongoDB
