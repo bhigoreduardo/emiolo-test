@@ -18,6 +18,7 @@ const UsuarioSchema = new mongoose.Schema({
   },
   senha: {
     type: String,
+    select: false,
   },
   imagem: {
     type: String,
