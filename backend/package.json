@@ -1,0 +1,16 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend teste emiolo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/app.js localhost 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bhigoreduardo"
+  },
+  "author": "bhigoreduardo",
+  "license": "MIT"
+}
