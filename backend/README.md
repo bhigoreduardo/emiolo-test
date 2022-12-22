@@ -6,8 +6,8 @@
 - [ ] Respostas em JSON com respectivos Status Code
 - [ ] Testes de endpoints Postman
 
-## 👶 Dependências:
-- `npm install express mongoose mongodb body-parser bcrypt dotenv express-validator jsonwebtoken`
+## 👶 Dependências: `npm install`
+- `npm install express mongoose mongodb body-parser bcrypt dotenv express-validator jsonwebtoken cors`
 - `npm install nodemon --save-dev`
 
 ## ⚙️ Configurações `.env`:
