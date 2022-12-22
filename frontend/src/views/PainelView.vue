@@ -1,16 +1,5 @@
 <template>
-    <nav class="navbar navbar-light bg-white mb-4 static-top shadow d-flex justify-content-center gap-3">
-        <span class="">John Doe</span>
-        <img :src="userImage" class="" />
-        <button class="btn-primary ">
-            <fa icon="user" />
-            Perfil
-        </button>
-        <button class="btn-light ">
-            <fa icon="sign-out" />
-            Sair
-        </button>
-    </nav>
+    <NavbarVue />
 
     <div class="container">
         <div class="card shadow mb-4">
@@ -52,19 +41,17 @@
 </template>
 
 <script>
+import NavbarVue from '@/components/Navbar.vue';
 
 export default {
     name: 'PainelView',
+    components: {
+        NavbarVue
+    },
     data() {
         return {
-            userImage: '/images/male-profile.svg'
+            
         }
     },
 }
 </script>
-
-<style scoped>
-img {
-    width: 32px;
-}
-</style>
