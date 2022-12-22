@@ -20,9 +20,6 @@ const UsuarioSchema = new mongoose.Schema({
     type: String,
     select: false,
   },
-  imagem: {
-    type: String,
-  },
   googleId: {
     type: String,
   },
