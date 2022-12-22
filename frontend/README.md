@@ -1,19 +1,10 @@
-# frontend
+## 📋 Desenvolvimento Vue.js (frontend):
+- [ ] Login (Home)
+- [ ] Cadastro
+- [ ] Dashboard
 
-## Project setup
-```
-npm install
-```
+## 🔥 Rodar Aplicação:
+- Vue.js (porta 8080): `npm run serve`
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 👶 Dependências:
+- `npm install`
