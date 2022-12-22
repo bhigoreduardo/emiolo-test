@@ -47,27 +47,27 @@ export default {
             event.preventDefault();
 
             if (!this.nome) {
-                this.showMessage('O campo nome é obrigatório.');
+                this.showMessage('O campo nome é obrigatório.', 'campo');
                 return;
             }
 
             if (!this.sobrenome) {
-                this.showMessage('O campo sobrenome é obrigatório.');
+                this.showMessage('O campo sobrenome é obrigatório.', 'campo');
                 return;
             }
 
             if (!this.email) {
-                this.showMessage('O campo e-mail é obrigatório.');
+                this.showMessage('O campo e-mail é obrigatório.', 'campo');
                 return;
             }
 
             if (!this.senha || !this.repetirSenha) {
-                this.showMessage('Os campos senha ou repetir senha devem ser preenchidos.');
+                this.showMessage('Os campos senha ou repetir senha devem ser preenchidos.', 'campo');
                 return;
             }
 
             if (this.senha !== this.repetirSenha) {
-                this.showMessage('Os campos senha e repetir senha devem ser iguais');
+                this.showMessage('Os campos senha e repetir senha devem ser iguais', 'campo');
                 return;
             }
 
@@ -78,13 +78,32 @@ export default {
                 senha: this.senha
             }
 
-            axios.post(`${this.apiUrl}/auth/cadastro`, qs.stringify({ body: body }))
-                .then(res => console.log(res))
-                .catch(error => console.log(error));
+            console.log(body);
+
+            axios.post(`${this.apiUrl}/auth/cadastro`, qs.stringify(body))
+                .then(res => {
+                    localStorage.setItem('tokenJWT', JSON.stringify(res.data.token));
+                    localStorage.setItem('usuarioAuth', JSON.stringify(res.data.usuario));
+                    this.showMessage('Cadastro realizado com sucesso! Você será redirecionado.', 'login');
+                })
+                .catch(error => {
+                    let messages = '';
+                    error.response.data.errors.forEach(e => {
+                        messages += e.msg;
+                    })
+
+                    this.showMessage(messages, 'campo');
+                });
 
         },
-        showMessage(text) {
+        showMessage(text, condition) {
             this.message = text;
+            
+            if (condition === 'login') {
+                setTimeout(() => window.location.href = '/painel', 3000);
+                return;
+            }
+
             setTimeout(() => this.message = null, 3000);
         }
     }
