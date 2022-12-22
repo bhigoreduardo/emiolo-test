@@ -49,4 +49,21 @@ form.user .form-control-user {
   border-radius: 0.35rem;
   transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
+
+.card {
+  overflow: hidden !important;
+}
+
+.small {
+  font-size: 80%;
+  font-weight: 400;
+  color: #4e73df;
+  text-decoration: none;
+  background-color: transparent;
+  transition: all .15s ease-in-out;
+}
+
+.small:hover {
+  text-decoration: underline;
+}
 </style>
