@@ -31,6 +31,13 @@
 - imagem: String
 - googleId: String
 
+## 😬 Instalações necessárias:
+- Git (Teste): `git -v`
+- Node.js (Teste): `node -v` e `npm -v`
+- VS Code
+- Postman
+- Vue CLI: `npm install -g @vue/cli` (Teste): `vue --version`
+
 ## 🎯 Requisições:
 - Node.js/Vue.js com MongoDB
 	- [ ] Cadastrar

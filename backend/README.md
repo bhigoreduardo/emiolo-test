@@ -6,13 +6,6 @@
 - [ ] Respostas em JSON com respectivos Status Code
 - [ ] Testes de endpoints Postman
 
-## 😬 Instalações necessárias:
-- Git (Teste): `git -v`
-- Node.js (Teste): `node -v` e `npm -v`
-- VS Code
-- Postman
-- Vue CLI: `npm install -g @vue/cli` (Teste): `vue --version`
-
 ## 👶 Dependências:
 - `npm install express mongoose mongodb body-parser bcrypt dotenv express-validator jsonwebtoken`
 - `npm install nodemon --save-dev`
