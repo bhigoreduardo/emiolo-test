@@ -6,6 +6,8 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+require('./controllers/usuarioController')(app);
+
 app.listen(3000, (error) => {
   if (error) throw error;
   console.log("Server running on port: 3000");

@@ -47,4 +47,4 @@ router.post(
     }
   );
 
-module.exports = router;
+module.exports = app => app.use('/auth', router);

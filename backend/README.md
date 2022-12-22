@@ -21,3 +21,15 @@
 - DB_NAME: Nome do banco MongoDB na sua máquina
 - DB_PORT: Número da porta do seu banco MongoDB da sua máquina
 - SECRET: Cadeia de caracteres para criação do Token JWT de autenticação
+
+## 🙆‍♂️ Testes HTTP:
+<details>
+<summary><b>📒 Cadastro (POST)</b></summary>
+
+- **Sucesso(201)**
+<img src="./src/assets/images/post-201.png" alt="POST Created" />
+
+- **Error(422)**
+<img src="./src/assets/images/post-422.png" alt="POST Unprocessable Entity" />
+
+</details>
