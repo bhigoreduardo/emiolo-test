@@ -14,5 +14,5 @@
 - Vue CLI: `npm install -g @vue/cli` (Teste): `vue --version`
 
 ## 👶 Dependências:
-- `npm install express mongodb body-parser bcrypt dotenv express-validator jsonwebtoken`
+- `npm install express mongoose mongodb body-parser bcrypt dotenv express-validator jsonwebtoken`
 - `npm install nodemon --save-dev`
