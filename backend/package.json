@@ -12,5 +12,10 @@
     "url": "https://github.com/bhigoreduardo"
   },
   "author": "bhigoreduardo",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "mongodb": "^4.13.0",
+    "mongoose": "^6.8.1"
+  }
 }
