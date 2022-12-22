@@ -20,3 +20,4 @@
 ## ⚙️ Configurações `.env`:
 - DB_NAME: Nome do banco MongoDB na sua máquina
 - DB_PORT: Número da porta do seu banco MongoDB da sua máquina
+- SECRET: Cadeia de caracteres para criação do Token JWT de autenticação
