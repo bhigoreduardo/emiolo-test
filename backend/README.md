@@ -26,10 +26,21 @@
 <details>
 <summary><b>📒 Cadastro (POST)</b></summary>
 
-- **Sucesso(201)**
-<img src="./src/assets/images/post-201.png" alt="POST Created" />
+- **Success(201)**
+<img src="./src/assets/images/cadastro-201.png" alt="POST Created" />
 
 - **Error(422)**
-<img src="./src/assets/images/post-422.png" alt="POST Unprocessable Entity" />
+<img src="./src/assets/images/cadastro-422.png" alt="POST Unprocessable Entity" />
+
+</details>
+
+<details>
+<summary><b>🔐 Autenticação (POST)</b></summary>
+
+- **Success(200)**
+<img src="./src/assets/images/autenticacao-200.png" alt="POST Ok" />
+
+- **Error(422)**
+<img src="./src/assets/images/autenticacao-422.png" alt="POST Unprocessable Entity" />
 
 </details>
