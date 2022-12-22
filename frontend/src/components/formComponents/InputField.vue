@@ -1,12 +1,18 @@
 <template>
     <div class="form-group">
-        <input :type="inputType" class="form-control form-control-user" :id="inputId" :placeholder="inputPlaceholder" :value="inputValue">
+        <input class="form-control form-control-user"
+            :type="inputType"
+            :id="inputId"
+            :placeholder="inputPlaceholder"
+            @input="$emit('update:modelValue', $event.target.value)"
+        >
     </div>
 </template>
 
 <script>
 export default {
     name: 'InputFieldVue',
-    props: ['inputType', 'inputId', 'inputPlaceholder', 'inputValue']
+    props: ['inputType', 'inputId', 'inputPlaceholder'],
+    emits: ['update:modelValue']
 }
 </script>
