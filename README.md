@@ -28,7 +28,6 @@
 - sobrenome: String
 - email: String
 - senha: String
-- imagem: String
 - googleId: String
 
 ## 😬 Instalações necessárias:
