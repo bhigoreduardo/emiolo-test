@@ -1,7 +1,7 @@
 <h1 align="center">
   💻<br>App Node.js/Vue.js
 </h1>
-<img src="./assets/images/cover.png" alt="Cover projeto" />
+<img src="./frontend/public/images/cover.png" alt="Cover projeto" />
 
 ✅ Back com Node.js (RESTApi)
 ✅ Front Vue.js
