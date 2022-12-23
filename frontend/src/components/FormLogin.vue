@@ -4,7 +4,6 @@
         <InputFieldVue inputType="email" inputId="email" inputPlaceholder="Informe seu e-mail" v-model="email" />
         <InputFieldVue inputType="password" inputId="senha" inputPlaceholder="Informe sua senha" v-model="senha" />
         <InputSubmitVue inputValue="Login" />
-        <hr>
         <ButtonVue href="/" btnType="btn-google" faIcon="fab" faName="google" buttonContent="Login com Google" />
     </form>
 </template>

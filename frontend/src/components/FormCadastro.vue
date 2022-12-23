@@ -9,7 +9,6 @@
         <InputFieldVue inputType="password" inputId="repetir-senha" inputPlaceholder="Repita sua senha"
             v-model="repetirSenha" />
         <InputSubmitVue inputValue="Cadastrar" />
-        <hr>
         <ButtonVue href="/" btnType="btn-google" faIcon="fab" faName="google" buttonContent="Cadastrar com Google" />
     </form>
 </template>
@@ -98,7 +97,7 @@ export default {
         },
         showMessage(text, condition) {
             this.message = text;
-            
+
             if (condition === 'login') {
                 setTimeout(() => window.location.href = '/painel', 3000);
                 return;

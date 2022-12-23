@@ -15,9 +15,6 @@
                   <FormCadastroVue />
                   <hr>
                   <div class="text-center">
-                    <router-link to="/recuperar-senha" class="small">Esqueceu sua senha?</router-link>
-                  </div>
-                  <div class="text-center">
                     <router-link to="/" class="small">Já possuo uma conta</router-link>
                   </div>
                 </div>
