@@ -91,9 +91,15 @@ router.post(
         if (!usuario) {
           return Promise.reject("Usuário com e-mail informado não está cadastrado.");
         }
+
+        if(req.body.googleId) {
+          if(usuario.googleId !== req.body.googleId) {
+            return Promise.reject("Usuário não está cadastrado.");
+          }
+        }
       }),
     body("senha").custom(async (value, { req }) => {
-      if (!req.body.googleId) {
+      if (req.body.googleId == null) {
         const { email } = req.body;
 
         const usuario = await Usuario.findOne({ email: email }).select("+senha");
