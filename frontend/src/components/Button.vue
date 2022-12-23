@@ -1,5 +1,5 @@
 <template>
-    <a :href="href" class="btn" :class="btnType" @click="$emit('click:modelButton')">
+    <a :href="href" :class="btnType" @click="$emit('click:modelButton')">
         <fa :icon="[`${faIcon}`, `${faName}`]" />
         {{ buttonContent }}
     </a>
@@ -14,16 +14,30 @@ export default {
 </script>
 
 <style scoped>
-.btn-google {
+.btn-planets,
+.btn-people {
     color: #fff;
-    background-color: #ea4335;
     border-color: #fff;
     transition: all .15s ease-in-out;
+    border-radius: 10rem !important;
+    padding: 7px !important;
+    cursor: pointer;
+    text-decoration: none;
 }
 
-.btn-google:hover {
-    color: #fff;
+.btn-planets{
+    background-color: #dfa70c;
+}
+
+.btn-people {
+    background-color: #ea4335;
+}
+
+.btn-planets:hover{
+    background-color: #d09c0c;
+}
+
+.btn-people:hover {
     background-color: #e12717;
-    border-color: #e6e6e6;
 }
 </style>
