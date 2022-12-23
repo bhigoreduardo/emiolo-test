@@ -21,17 +21,11 @@
                     </thead>
 
                     <tbody class="bg-white">
-                        <tr>
-                            <td>1</td>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Garrett Winters</td>
-                            <td>Accountant</td>
-                            <td>Tokyo</td>
+                        <tr v-for="usuario of usuarios" :key="usuario._id">
+                            <td v-text="usuario._id"></td>
+                            <td v-text="usuario.nome"></td>
+                            <td v-text="usuario.sobrenome"></td>
+                            <td v-text="usuario.email"></td>
                         </tr>
                     </tbody>
                 </table>
@@ -41,6 +35,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 import NavbarVue from '@/components/Navbar.vue';
 
 export default {
@@ -50,8 +46,17 @@ export default {
     },
     data() {
         return {
-            
+            apiUrl: 'http://localhost:3000',
+            usuarios: []
         }
     },
+    mounted() { },
+    methods: {
+        async findAll() {
+            axios.get(`${this.apiUrl}/auth/registros`)
+                .then(res => console.log(res))
+                .catch(error => console.log(error));
+        }
+    }
 }
 </script>
