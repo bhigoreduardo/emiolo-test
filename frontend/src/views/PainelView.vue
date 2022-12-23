@@ -47,15 +47,23 @@ export default {
     data() {
         return {
             apiUrl: 'http://localhost:3000',
+            message: null,
             usuarios: []
         }
     },
-    mounted() { },
+    mounted() {
+        this.findAll();
+    },
     methods: {
         async findAll() {
-            axios.get(`${this.apiUrl}/auth/registros`)
-                .then(res => console.log(res))
-                .catch(error => console.log(error));
+            const token = JSON.parse(localStorage.getItem('tokenJWT'));
+            const config = {
+                headers: { Authorization: `Bearer ${token}` }
+            };
+
+            axios.get(`${this.apiUrl}/auth/registros`, config)
+                .then(res => this.usuarios = res.data.usuarios)
+                .catch(error => this.message = error.response.data.error);
         }
     }
 }
