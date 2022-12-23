@@ -12,6 +12,34 @@ function generateToken(params = {}) {
   return jwt.sign(params, SECRET, { expiresIn: 86400 });
 }
 
+function checkToken(req, res, next) {
+  const authHeader = req.headers.authorization;
+
+  if (!authHeader) {
+    return res.status(401).send({ error: "Token não encontrado." });
+  }
+
+  const parts = authHeader.split(" ");
+
+  if (!parts.length === 2) {
+    return res.status(401).send({ error: "Token inválido." });
+  }
+
+  const [scheme, token] = parts;
+
+  if (!/^Bearer$/i.test(scheme)) {
+    return res.status(401).send({ error: "Token mal formatado." });
+  }
+
+  const SECRET = process.env.SECRET;
+
+  jwt.verify(token, SECRET, (error, decoded) => {
+    if (error) return res.status(401).send({ error: "Token inválido." });
+
+    next();
+  });
+}
+
 router.post(
   "/cadastro",
   [
@@ -93,5 +121,15 @@ router.post(
     return res.status(200).send({ usuario, token: generateToken({ id: usuario._id }) });
   }
 );
+
+router.get("/registros", checkToken, async (req, res) => {
+  try {
+    const usuarios = await Usuario.find({});
+
+    res.status(200).send({ usuarios });
+  } catch (error) {
+    return res.status(500).send({ error: "Erro interno no servidor, tente novamente." });
+  }
+});
 
 module.exports = (app) => app.use("/auth", router);
