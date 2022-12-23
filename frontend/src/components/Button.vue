@@ -1,5 +1,5 @@
 <template>
-    <a :href="href" class="btn" :class="btnType">
+    <a :href="href" class="btn" :class="btnType" @click="$emit('click:modelButton')">
         <fa :icon="[`${faIcon}`, `${faName}`]" />
         {{ buttonContent }}
     </a>
@@ -9,6 +9,7 @@
 export default {
     name: 'ButtonVue',
     props: ['href', 'btnType', 'faIcon', 'faName', 'buttonContent'],
+    emits: ['click:modelButton']
 }
 </script>
 

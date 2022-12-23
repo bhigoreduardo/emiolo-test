@@ -3,8 +3,10 @@
     <form class="user" @submit="login($event)">
         <InputFieldVue inputType="email" inputId="email" inputPlaceholder="Informe seu e-mail" v-model="email" />
         <InputFieldVue inputType="password" inputId="senha" inputPlaceholder="Informe sua senha" v-model="senha" />
-        <InputSubmitVue inputValue="Login" />
-        <ButtonVue href="/" btnType="btn-google" faIcon="fab" faName="google" buttonContent="Login com Google" />
+        <InputSubmitVue inputValue="Fazer login" />
+        <!-- <ButtonVue btnType="btn-google" faIcon="fab" faName="google" buttonContent="Login com Google"
+            @click:modelButton="loginGoogle" /> -->
+        <div id="buttonDiv"></div>
     </form>
 </template>
 
@@ -62,6 +64,10 @@ export default {
                     this.showMessage(error.response.data.errors[0].msg, 'campo');
                 });
         },
+        async loginGoogle() {
+            // const usuarioGoogle = await this.$gAuth.signIn();
+            // console.log(usuarioGoogle);
+        },
         showMessage(text, condition) {
             this.message = text;
 
@@ -71,7 +77,8 @@ export default {
             }
 
             setTimeout(() => this.message = null, 3000);
-        }
+        },
+
     }
 }
 </script>

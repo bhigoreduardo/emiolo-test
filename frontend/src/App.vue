@@ -2,6 +2,15 @@
   <router-view />
 </template>
 
+<script>
+export default {
+  name: 'App',
+  setup() {
+    
+  },
+}
+</script>
+
 <style>
 body {
   background-color: #4e73df;
@@ -13,7 +22,7 @@ body {
 .btn {
   width: 100%;
   border-radius: 10rem !important;
-  padding: 15px !important;
+  padding: 7px !important;
   cursor: pointer;
 }
 

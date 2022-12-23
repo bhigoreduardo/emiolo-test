@@ -9,7 +9,8 @@
         <InputFieldVue inputType="password" inputId="repetir-senha" inputPlaceholder="Repita sua senha"
             v-model="repetirSenha" />
         <InputSubmitVue inputValue="Cadastrar" />
-        <ButtonVue href="/" btnType="btn-google" faIcon="fab" faName="google" buttonContent="Cadastrar com Google" />
+        <!-- <ButtonVue href="/" btnType="btn-google" faIcon="fab" faName="google" buttonContent="Cadastrar com Google" /> -->
+        <div id="buttonDiv"></div>
     </form>
 </template>
 
