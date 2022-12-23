@@ -5,7 +5,7 @@
             <span class="username">{{ nome }} {{ sobrenome }},</span>
             <span class="email">{{ email }}</span>
         </p>
-        <button class="btn-light ">
+        <button class="btn-light " @click="loggout">
             <fa icon="sign-out" />
             Sair
         </button>
@@ -29,6 +29,14 @@ export default {
         this.nome = usuario.nome;
         this.sobrenome = usuario.sobrenome;
         this.email = usuario.email;
+    },
+    methods: {
+        loggout() {
+            localStorage.removeItem('tokenJWT');
+            localStorage.removeItem('usuarioAuth');
+
+            window.location.href = '/';
+        }
     }
 }
 </script>
