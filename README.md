@@ -39,10 +39,38 @@
 
 ## 🎯 Requisições:
 - Node.js/Vue.js com MongoDB
-	- [ ] Cadastrar
-	- [ ] Autenticar (Obter usuário)
-	- [ ] Listar
+	- [ x ] Cadastrar
+	- [ x ] Autenticar (Obter usuário)
+	- [ x ] Listar
 - Google API
-	- [ ] Cadastrar
-	- [ ] Autenticar (Obter usuário)
+	- [ x ] Cadastrar
+	- [ x ] Autenticar (Obter usuário)
 - Consumo API Swapi
+
+## 💼 Tecnologias utilizadas:
+
+- #### Vue.js (Front)
+  - HTML
+  - CSS
+  - JavaScript
+
+- #### Node.js/Express (Back)
+  - JavaScript
+
+- #### noSQL (Banco)
+  - MongoDB
+
+<h2>🦄 Autor</h2>
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/bhigoreduardo">
+        <img src="https://avatars.githubusercontent.com/u/96431991?v=4" width="100px;" alt="Foto do Higor Eduardo no GitHub"/><br>
+        <sub>
+          <b>Higor Eduardo</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
